@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600&family=Nunito:wght@400;700&family=Open+Sans&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;800&family=Rubik:wght@400;500&family=Shantell+Sans:wght@300&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<div class="container">
+
+		<header class="header">
+
+			<div class="header__left">
+				
+				<div class="header__logo">
+                   <a href="/" class="logo"><img src="/images/logo.jpeg" alt="logo"></a>
+                </div>
+
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="/weddingplanner-online/" class="menu__link">Svatební plánovač online</a></li>
+						<li class="menu__item"><a href="/wedding-web/" class="menu__link">Svatební web</a></li>
+						<li class="menu__item"><a href="/pricing/" class="menu__link">Ceník</a></li>
+						<li class="menu__item"><a href="/create/" class="menu__link">Vytvořit vlastní svatební web</a></li>
+						<li class="menu__item"><a href="/login/" class="menu__link">Přihlásit</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<main class="main">
+
+            {{ content | safe }}
+
+        </main>
+
+
+		<footer class="footer">
+			<div class="footer__grid">
+				<div class="footer__grid-column">
+					<h2>Weddingplanner</h2>
+					<ul class="footer__links">
+						<li><a href="/weddingplanner-online/">Svatební plánovač online</a></li>
+						<li><a href="/wedding-web/">Svatební web</a></li>
+						<li><a href="/pricing/">Ceník</a></li>
+						<li><a href="/create/">Vytvořit vlastní svatební web</a></li>
+						<li><a href="/login/">Přihlásit</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__grid-column">
+					<h2>Kontakt</h2>
+					<p>
+						<span class="footer__title">Telefon:</span><br>
+						+420 *** *** ***
+					</p>
+					<p>
+						<span class="footer__title">E-mail:</span><br>
+						<a href="mailto:wedding@planner.cz">wedding@planner.cz</a>
+					</p>
+				</div>
+
+                <div class="footer__grid-column">
+                    <h2>Site created by</h2>
+					<p>Doubravka Vetešníková</p>
+					<p>&copy;2023, Doubravka Vetešníková</p>
+                    <h2>Icons by</h2>
+                    <p><a href="https://icons8.com">icons8.com</a></p>
+
+				</div>
+			</div>
+		</footer>
+
+
+	</div> 
+</body>
+</html>
