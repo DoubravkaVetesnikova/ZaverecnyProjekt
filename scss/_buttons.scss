@@ -1,0 +1,15 @@
+@use 'colors';
+@use 'format';
+
+.button {
+    padding: format.$spacer / 2;
+    border-radius: 10px;
+    background-color: colors.$primary;
+
+    &__link {
+        color: #ffffff;
+        text-decoration: none;
+        border: none;
+    }
+
+}

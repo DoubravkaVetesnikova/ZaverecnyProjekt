@@ -1,0 +1,29 @@
+@use 'colors';
+@use 'format';
+
+.footer {
+    margin-top: format.$spacer * 2;
+    background-color: colors.$footer-color;
+    color: #ffffff;
+    padding: format.$spacer;
+
+    &__heading {
+        color: colors.$nude-color;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__links {
+        padding: 0;
+        list-style: none;
+    }
+
+    &__link {
+        color: colors.$background-color;
+        text-decoration: none;
+    }
+
+}

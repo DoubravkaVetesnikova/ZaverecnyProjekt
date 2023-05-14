@@ -1,0 +1,49 @@
+@use 'colors';
+@use 'format';
+
+.header {
+    margin-bottom: format.$spacer * 2;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        background-color: colors.$heading-color;
+        text-align: center;
+        padding: format.$spacer;
+        border-radius: 20px;
+    }
+
+}
+
+.logo__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: format.$font-logo;
+    font-weight: 600;
+}
+
+.menu {
+    &__list {
+        margin: 0;
+        padding: 2px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: colors.$heading-color;
+
+        &:hover,
+        &:active {
+            background-color: colors.$primary;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+    }
+
+
+}

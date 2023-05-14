@@ -1,0 +1,30 @@
+@use 'colors';
+@use 'format';
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *, ::before, ::after {
+    box-sizing: inherit;
+  }
+  
+  .container {
+    font-family: "Raleway", sans-serif;
+    margin: format.$spacer auto;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4 {
+    color: colors.$heading-color;
+    font-family: format.$font-heading;
+  }
+
+  .main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: format.$spacer * 2;
+  }
