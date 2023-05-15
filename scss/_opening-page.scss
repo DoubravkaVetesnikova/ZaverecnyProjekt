@@ -5,10 +5,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: format.$spacer;
+    padding: format.$spacer * 2;
 
     &__image {
         position: absolute;
+        border-radius: 10px;
         left: 0;
         top: 0;
         width: 100%;
@@ -18,13 +19,17 @@
     }
 
     &__text {
-        padding: format.$spacer;
         max-width: 50%;
     }
 
     &__heading {
         margin-top: 0;
         font-size: 40px;
+    }
+
+    &__button {
+        margin-top: 20px;
+        width: 50%; 
     }
 
 }
@@ -35,6 +40,11 @@
     grid-template-columns: 1fr 1fr;
     gap: format.$spacer * 2;
     text-align: center;
+
+    @media screen and (max-width: 1012px) {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__content {
         display: flex;

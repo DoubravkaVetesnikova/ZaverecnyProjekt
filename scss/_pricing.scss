@@ -1,0 +1,39 @@
+@use 'colors';
+@use 'format';
+
+.pricings {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    &__heading {
+        grid-column: 1 / span 4;
+        text-align: center;
+    }
+
+    .pricing {
+        text-align: center;
+        border: 1px solid colors.$additional;
+        padding: 20px 0;
+        border-radius: 20px;
+        display: grid;
+        grid-column: 1fr;
+        grid-template-rows: 100px repeat(5, 50px);
+
+        &__heading {
+            border-bottom: 1px solid colors.$additional;
+        }
+
+        &__button {
+            grid-row: 6 / span 1;
+        }
+    }
+
+}
+
+.pricing--alt {
+    width: 300px;
+    height: 500px;
+}
+
+

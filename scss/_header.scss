@@ -2,9 +2,13 @@
 @use 'format';
 
 .header {
-    margin-bottom: format.$spacer * 2;
+    margin-bottom: format.$spacer;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1012px) {
+        flex-direction: column;
+    }
 
     &__logo {
         background-color: colors.$heading-color;
@@ -29,6 +33,11 @@
         list-style: none;
         display: flex;
         justify-content: center;
+
+        @media screen and (max-width: 1012px) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__link {

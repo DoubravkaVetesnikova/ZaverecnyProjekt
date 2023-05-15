@@ -11,7 +11,7 @@ html {
   
   .container {
     font-family: "Raleway", sans-serif;
-    margin: format.$spacer auto;
+    margin: 30px auto 0 auto;
     line-height: 1.5;
   }
   
@@ -20,11 +20,19 @@ html {
     font-family: format.$font-heading;
   }
 
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
   .main {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    gap: format.$spacer * 2;
+    gap: format.$spacer * 3;
   }

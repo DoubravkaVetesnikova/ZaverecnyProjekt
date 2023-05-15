@@ -1,0 +1,81 @@
+@use 'colors';
+@use 'format';
+
+.benefits--alt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.create-web {
+    display: flex;
+    justify-content: space-between;
+    background-color: colors.$pastel-blue;
+    padding: format.$spacer 40px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px colors.$additional;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        gap: format.$spacer;
+    }
+
+    &__button {
+        align-self: center;
+
+        @media screen and (max-width: 800px) {
+            align-self: flex-start;
+        }
+    }
+}
+
+.web-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: format.$spacer;
+    background-color: colors.$nude-color;
+    padding: format.$spacer * 2;
+    text-align: center;
+    border-radius: 5px;
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        gap: format.$spacer;
+    }
+
+    &__item {
+        background-color: #ffffff;
+        padding: format.$spacer;
+        border-radius: 10px;
+        box-shadow: 2px 3px 5px colors.$additional;
+    }
+
+    :last-child {
+        grid-column: 3 / span 1;
+        grid-row: 5 / span 1;
+
+        @media screen and (max-width: 1024px) {
+            grid-column: 2 / span 1;
+        }
+    }
+
+    :nth-child(17) {
+        grid-column: 2 / span 1;
+        grid-row: 5 / span 1;
+
+        @media screen and (max-width: 1024px) {
+            grid-column: 1 / span 1;
+        }
+    }
+
+
+}

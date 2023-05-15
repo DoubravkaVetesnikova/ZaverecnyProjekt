@@ -2,7 +2,7 @@
 @use 'format';
 
 .footer {
-    margin-top: format.$spacer * 2;
+    margin-top: format.$spacer * 3;
     background-color: colors.$footer-color;
     color: #ffffff;
     padding: format.$spacer;
@@ -14,6 +14,12 @@
     &__flex {
         display: flex;
         justify-content: space-around;
+
+        @media screen and (max-width: 950px) {
+            flex-direction: column;
+            gap: format.$spacer;
+            text-align: center;
+        }
     }
 
     &__links {
