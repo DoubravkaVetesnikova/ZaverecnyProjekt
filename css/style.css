@@ -427,7 +427,50 @@ h2 {
   grid-row: 6/span 1;
 }
 
-.pricing--alt {
-  width: 300px;
-  height: 500px;
+.create {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+@media screen and (max-width: 1012px) {
+  .create {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .create {
+    grid-template-columns: 1fr;
+  }
+}
+.create__heading {
+  grid-column: span 3;
+  text-align: center;
+}
+@media screen and (max-width: 1012px) {
+  .create__heading {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 800px) {
+  .create__heading {
+    grid-column: span 1;
+  }
+}
+.create__img {
+  width: 100%;
+}
+.create__item {
+  text-align: center;
+}
+.create__introduction {
+  background-color: #A9CAE8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px #797B84;
+  text-align: center;
+}
+.create__name {
+  font-family: "Shantell Sans", cursive;
+  font-size: 22px;
 }/*# sourceMappingURL=style.css.map */
