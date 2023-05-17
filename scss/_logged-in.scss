@@ -1,0 +1,11 @@
+@use 'colors';
+@use 'format';
+
+.back__link {
+    text-decoration: none;
+    color: colors.$heading-color;
+}
+
+.logged {
+    text-align: center;
+}

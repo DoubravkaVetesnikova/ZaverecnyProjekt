@@ -473,4 +473,13 @@ h2 {
 .create__name {
   font-family: "Shantell Sans", cursive;
   font-size: 22px;
+}
+
+.back__link {
+  text-decoration: none;
+  color: #583746;
+}
+
+.logged {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
