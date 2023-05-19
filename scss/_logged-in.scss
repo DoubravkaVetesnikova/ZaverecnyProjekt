@@ -9,3 +9,12 @@
 .logged {
     text-align: center;
 }
+
+.reset {
+    text-align: center;
+
+    &__text {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}

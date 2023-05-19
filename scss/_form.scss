@@ -2,5 +2,62 @@
 @use 'format';
 
 .form {
+    width: 100%;
+    display: grid;
+    gap: format.$spacer;
+    grid-template-areas: 
+        "date date"
+        "bride groom"
+        "domain domain"
+        "text text"
+        "button button"
+        "back back";
+
+        :first-child {
+            grid-area: date;
+        }
+
+        :nth-child(6) {
+            grid-area: text;
+        }
     
+    &__form-field {
+        display: block;
+        margin-bottom: 10px;
+
+        > label {
+            display: block;
+            font-size: 16px;
+            color: colors.$additional;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            border: 1px solid colors.$additional;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+.domain-fixed {
+    position: relative;
+
+    &__name {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        color: colors.$additional;
+
+        @media screen and (max-width: 800px) {
+            top: 30px;
+            left: 0;
+        }
+
+        @media screen and (max-width: 474px) {
+            top: 60px;
+            left: 0;
+        }
+    }
 }

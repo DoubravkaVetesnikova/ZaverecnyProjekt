@@ -14,7 +14,7 @@ title: form
                 <input type="text" name="date" id="date">
             </div>
 
-            <div class="from__form-field">
+            <div class="form__form-field">
                 <label for="bride">Jméno nevěsty (nepovinné):</label>
                 <input type="text" name="bride" id="bride">
             </div>
@@ -27,11 +27,16 @@ title: form
             <div class="form__form-field">
                 <label for="domain">Adresa Vašeho svatebního webu (nepovinné):</label>
                 <input type="text" name="domain" id="domain">
-                <div>.weddingplanner.cz</div>
-                <div>
-                    <p>Uveďte adresu bez www a teček. Adresu stránek lze pak kdykoliv v průběhu změnit. Pokud si teď nejste adresou jistí, nechte pole prázdné.</p>
-                </div>
             </div>
+
+            <div class="domain-fixed">
+                <p class="domain-fixed__name">weddingplanner.cz</p>
+            </div>
+            
+            <div class="form__text">
+                <p>Uveďte adresu bez www a teček. Adresu stránek lze pak kdykoliv v průběhu změnit. Pokud si teď nejste adresou jistí, nechte pole prázdné.</p>
+            </div>
+            
 
             <button class="button"><a class="button__link" href="/signup/">Přeskočit tento krok</a></button>
             <button type="submit" class="button"><a class="button__link" href="/signup/">Dokončit vytvoření svatebního webu</a></button>

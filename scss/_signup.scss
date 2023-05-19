@@ -1,0 +1,28 @@
+@use 'colors';
+@use 'format';
+
+.signup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: format.$spacer;
+    text-align: center;
+
+    &__item {
+        background-color: colors.$pastel-blue;
+        border-radius: 50px;
+        padding: format.$spacer;
+        box-shadow: 2px 3px 5px colors.$additional;
+    }
+
+    &__link {
+        display: flex;
+        gap: format.$spacer;
+        justify-content: center;
+        color: colors.$heading-color;
+    }
+
+    &__image {
+        max-width: 50px;
+    }
+}

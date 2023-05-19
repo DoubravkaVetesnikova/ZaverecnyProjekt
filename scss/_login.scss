@@ -1,0 +1,65 @@
+@use 'colors';
+@use 'format';
+
+.login {
+    width: 100%;
+    background-color: colors.$background-color;
+    box-shadow: 2px 3px 5px colors.$additional;
+    padding: format.$spacer * 2;
+    border-radius: 20px;
+    margin: 40px auto 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    :first-child {
+        grid-column: 2 / span 1;
+    }
+
+    :nth-child(2) {
+        grid-column: 2 / span 1;
+    }
+
+    :last-child {
+        grid-column: 2 / span 1;
+    }
+
+
+    &__logo {
+        width: 100%;
+        background-color: colors.$heading-color;
+        text-align: center;
+        padding: format.$spacer;
+        border-radius: 20px;
+    }
+    &__box {
+        width: 100%;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: format.$spacer;
+    }
+
+    &__form-field {
+        display: block;
+        margin-bottom: 20px;
+
+        > label {
+            display: block;
+            font-size: 16px;
+            color: colors.$additional;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            border: 1px solid colors.$additional;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+
+}
+
