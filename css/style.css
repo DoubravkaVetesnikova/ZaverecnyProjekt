@@ -336,7 +336,7 @@ h2 {
 .create-web {
   display: flex;
   justify-content: space-between;
-  background-color: #A9CAE8;
+  background-color: #c6d6da;
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 2px 3px 5px #797B84;
@@ -404,27 +404,98 @@ h2 {
 
 .pricings {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr 400px 1fr;
+  grid-template-rows: 100px 30px 1fr 30px;
   gap: 10px;
 }
-.pricings__heading {
+@media screen and (max-width: 1300px) {
+  .pricings {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+}
+.pricings :first-child {
   grid-column: 1/span 4;
-  text-align: center;
+  grid-row: 1/span 1;
+}
+.pricings :nth-child(2) {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+.pricings :nth-child(3) {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+}
+.pricings :nth-child(4) {
+  grid-column: 3/span 1;
+  grid-row: 2/span 3;
+}
+.pricings :last-child {
+  grid-column: 4/span 1;
+  grid-row: 3/span 1;
 }
 .pricings .pricing {
   text-align: center;
   border: 1px solid #797B84;
   padding: 20px 0;
   border-radius: 20px;
-  display: grid;
-  grid-column: 1fr;
-  grid-template-rows: 100px repeat(5, 50px);
+  display: flex;
+  flex-direction: column;
 }
 .pricings .pricing__heading {
   border-bottom: 1px solid #797B84;
 }
-.pricings .pricing__button {
-  grid-row: 6/span 1;
+.pricings .pricing__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.pricings .pricing__content :first-child {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+}
+.pricings .pricing__content :nth-child(2) {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+}
+.pricings .pricing__content :nth-child(3) {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+.pricings .pricing__content :nth-child(4) {
+  grid-column: 1/span 1;
+  grid-row: 4/span 1;
+}
+.pricings .pricing__content :last-child {
+  grid-column: 1/span 1;
+  grid-row: 5/span 1;
+}
+
+.pricing--alt {
+  color: #F00048;
+}
+
+.pricing__heading--alt {
+  position: relative;
+}
+
+.recommend {
+  position: absolute;
+  top: 0;
+  right: -25px;
+  transform: rotate(50deg);
+  background-color: #ffffff;
+  width: 110px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.recommend__ribbon {
+  font-family: "Shantell Sans", cursive;
+  color: #F00048;
 }
 
 .create {
@@ -464,7 +535,7 @@ h2 {
   text-align: center;
 }
 .create__introduction {
-  background-color: #A9CAE8;
+  background-color: #c6d6da;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 3px 5px #797B84;
